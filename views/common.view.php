@@ -9,7 +9,7 @@
 $config = \Nos\Templates\Custom\loadViewConfig();
 
 $jumbotron = false;
-$view = \View::forge("noviusos_templates_custom::".$config['theme_name']."/index", array('jumbotron' => $jumbotron, 'page' => $page,
+$view = \View::forge("noviusos_templates_e::".$config['theme_name']."/index", array('jumbotron' => $jumbotron, 'page' => $page,
     'title' => $title,
     'wysiwyg' => $wysiwyg,
     'current_context' => $page->get_context()) , false);

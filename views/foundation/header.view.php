@@ -25,7 +25,7 @@ switch ($config['option']['title']['element']) {
 }
 
 
-$path_img = "static/apps/noviusos_templates_custom/img/";
+$path_img = "static/apps/noviusos_templates_e/img/";
 
 
 $depth = 2;

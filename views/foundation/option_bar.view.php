@@ -64,7 +64,7 @@
                     <p id="p_custom" style="display: <?= $str_skin_name == "Custom" ? "block" : "none" ?>">
                     <textarea id="txt_css" name="txt_css" placeholder="Placez votre sass ici" style="max-width: 250px ;  height: 150px ; position: relative ;"><?php
 
-                    echo file_get_contents("static/apps/noviusos_templates_custom/vendor/".$config["theme_name"]."/sass/skin/Custom.scss");
+                    echo file_get_contents("static/apps/noviusos_templates_e/vendor/".$config["theme_name"]."/sass/skin/Custom.scss");
 
 
 

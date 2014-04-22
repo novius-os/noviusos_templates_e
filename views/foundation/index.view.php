@@ -24,7 +24,7 @@ $config = \Nos\Templates\Custom\loadViewConfig();
 
     <?php
 
-    $tab_skin = array_diff(scandir("static/apps/noviusos_templates_custom/vendor/".$config["theme_name"]."/css/skin/"), array('..', '.'));
+    $tab_skin = array_diff(scandir("static/apps/noviusos_templates_e/vendor/".$config["theme_name"]."/css/skin/"), array('..', '.'));
 
     $str_theme_name = $config["theme_name"];
     $str_skin_name = $config["skin"];
@@ -35,12 +35,12 @@ $config = \Nos\Templates\Custom\loadViewConfig();
 
         if( $chaine[0] == $str_skin_name)
         {
-            echo '<link title="'.$chaine[0].'" rel="stylesheet" type="text/css" href="static/apps/noviusos_templates_custom/vendor/'.$str_theme_name.'/css/skin/'.$value.'">
+            echo '<link title="'.$chaine[0].'" rel="stylesheet" type="text/css" href="static/apps/noviusos_templates_e/vendor/'.$str_theme_name.'/css/skin/'.$value.'">
              ';
         }
         else
         {
-            echo '<link title="'.$chaine[0].'" rel="alternate stylesheet" type="text/css" href="static/apps/noviusos_templates_custom/vendor/'.$str_theme_name.'/css/skin/'.$value.'">
+            echo '<link title="'.$chaine[0].'" rel="alternate stylesheet" type="text/css" href="static/apps/noviusos_templates_e/vendor/'.$str_theme_name.'/css/skin/'.$value.'">
              ';
         }
     }
@@ -53,15 +53,15 @@ $config = \Nos\Templates\Custom\loadViewConfig();
 
     <!-- Fallback Jquery -->
     <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script type="text/javascript">window.jQuery || document.write('<script src="static/apps/noviusos_templates_custom/vendor/js/jquery.min.j">\x3C/script>')</script>
+    <script type="text/javascript">window.jQuery || document.write('<script src="static/apps/noviusos_templates_e/vendor/js/jquery.min.j">\x3C/script>')</script>
 
     <!-- Fallback Jquery UI-->
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    <script type="text/javascript">window.jQuery.ui || document.write('<script src="static/apps/noviusos_templates_custom/vendor/js/jquery-ui.min.j">\x3C/script>')</script>
+    <script type="text/javascript">window.jQuery.ui || document.write('<script src="static/apps/noviusos_templates_e/vendor/js/jquery-ui.min.j">\x3C/script>')</script>
 
     <!-- Fallback Bootstrap.js-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.2/js/foundation.min.js"></script>
-    <script>    $.fn.modal || document.write('<script src="static/apps/noviusos_templates_custom/vendor/<?=$str_theme_name?>/js/foundation.min.js">\x3C/script>')</script>
+    <script>    $.fn.modal || document.write('<script src="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/js/foundation.min.js">\x3C/script>')</script>
 
 
     <script src="static/apps/noviusos_templates_custom/vendor/<?=$str_theme_name?>/js/foundation/foundation.topbar.js"></script>
@@ -95,7 +95,7 @@ include($config["function_file"]);
        <?php
        if($config["option_bar"] == "y")
        {
-           $view = \Nos\FrontCache::viewForgeUncached("noviusos_templates_custom::".$str_theme_name."/option_bar" ,array(
+           $view = \Nos\FrontCache::viewForgeUncached("noviusos_templates_e::".$str_theme_name."/option_bar" ,array(
            'sitename'=>$config['option']['title']['title_text'],
            'link' => $config['option']['title']['url'],
            'page' => $page,
@@ -118,7 +118,7 @@ include($config["function_file"]);
         <?php }?>
         <div id="content_inner">
             <?php
-            $view =  \View::forge("noviusos_templates_custom::".$str_theme_name."/header",array(
+            $view =  \View::forge("noviusos_templates_e::".$str_theme_name."/header",array(
                 'sitename'=>$config['option']['title']['title_text'],
                 'link' => $config['option']['title']['url'],
                 'page' => $page,
@@ -135,7 +135,7 @@ include($config["function_file"]);
             ?>
 
             <?php
-            $view = View::forge("noviusos_templates_custom::".$str_theme_name."/content"  ,
+            $view = View::forge("noviusos_templates_e::".$str_theme_name."/content"  ,
                 array(  'page' => $page,
                     'title' => $title,
                     'wysiwyg' => $wysiwyg,
@@ -145,7 +145,7 @@ include($config["function_file"]);
             echo $view;
             ?>
 
-            <?php $view = View::forge("noviusos_templates_custom::".$str_theme_name."/footer", array(  'page' => $page,
+            <?php $view = View::forge("noviusos_templates_e::".$str_theme_name."/footer", array(  'page' => $page,
                 'title' => $title,
                 'wysiwyg' => $wysiwyg,
             ), false);

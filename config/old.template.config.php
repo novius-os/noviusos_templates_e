@@ -8,7 +8,7 @@
  * @link http://www.novius-os.org
  */
 
-Nos\I18n::current_dictionary('noviusos_templates_custom::common');
+Nos\I18n::current_dictionary('noviusos_templates_e::common');
 /**
  * Created by PhpStorm.
  * User: dahan
@@ -29,11 +29,11 @@ $str_skin_name= $data['skin'];
 
 if($str_theme_name == "bootstrap")
 {
-    $file_css = "static/apps/noviusos_templates_custom/vendor/".$str_theme_name."/less/Style.less";
+    $file_css = "static/apps/noviusos_templates_e/vendor/".$str_theme_name."/less/Style.less";
 }
 else
 {
-    $file_css = "static/apps/noviusos_templates_custom/vendor/".$str_theme_name."/sass/Style.scss";
+    $file_css = "static/apps/noviusos_templates_e/vendor/".$str_theme_name."/sass/Style.scss";
 }
 
 return array(
@@ -227,7 +227,7 @@ return array(
         "title" => array(
 
             "element" => "both", // image , text , both
-            "url" => "static/apps/noviusos_templates_custom/img/novius.png",
+            "url" => "static/apps/noviusos_templates_e/img/novius.png",
             "title_text" => "TemplateDeclinaison.com",
             "baseline_text" => "Le template declinable",
         ),

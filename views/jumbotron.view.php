@@ -8,7 +8,7 @@
 $config = \Nos\Templates\Custom\loadViewConfig();
 
 $jumbotron = true;
-$view = \View::forge("noviusos_templates_custom::".$config['theme_name']."/index", array('jumbotron' => $jumbotron,
+$view = \View::forge("noviusos_templates_e::".$config['theme_name']."/index", array('jumbotron' => $jumbotron,
     'page' => $page,
     'title' => $title,
     'wysiwyg' => $wysiwyg,

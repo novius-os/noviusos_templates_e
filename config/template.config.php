@@ -161,7 +161,7 @@ return array (
     'title' => 
     array (
       'element' => 'both',
-      'url' => 'static/apps/noviusos_templates_custom/img/novius.png',
+      'url' => 'static/apps/noviusos_templates_e/img/novius.png',
       'title_text' => 'TemplateDeclinaison.com',
       'baseline_text' => 'Le template declinable',
     ),

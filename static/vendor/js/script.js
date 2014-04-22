@@ -26,7 +26,7 @@
         $("#style_refresh").click(function(){
 
             $.ajax({
-                url:"htdocs/apps/noviusos_templates_custom/css_compile.php",
+                url:"htdocs/apps/noviusos_templates_e/css_compile.php",
                 type:"POST",
                 dataType: "html",
                 error :function(err){alert("erreur lors de la requete ajax :\n "); console.log(err)},
@@ -51,7 +51,7 @@
         $("#style_submit").click(function(){
 
             $.ajax({
-                url:"htdocs/apps/noviusos_templates_custom/css_submit.php",
+                url:"htdocs/apps/noviusos_templates_e/css_submit.php",
                 type:"POST",
                 dataType: "html",
                 data : $("#form_option").serialize(),
@@ -98,7 +98,7 @@
 function affiche_content(skin)
 {
     $.ajax({
-        url:"htdocs/apps/noviusos_templates_custom/change_skin.php",
+        url:"htdocs/apps/noviusos_templates_e/change_skin.php",
         type:"POST",
         dataType: "html",
 

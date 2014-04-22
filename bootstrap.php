@@ -16,7 +16,7 @@ namespace Nos\Templates\Custom;
 
 function loadViewConfig()
 {
-    \Config::load('noviusos_templates_custom::template', 'template');
+    \Config::load('noviusos_templates_e::template', 'template');
     $config = \Config::get('template');
 
     return $config;

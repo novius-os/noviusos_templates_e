@@ -9,20 +9,21 @@
  */
 
 return array(
-    'name'    => 'Novius OS Custom templates',
+    'name'    => 'Novius OS Custom E',
     'version' => '4.1 (Dubrovka)',
     'provider' => array(
         'name' => 'Novius OS',
     ),
     'namespace' => 'Nos\Templates\Custom',
-    'i18n_file' => 'noviusos_templates_custom::metadata',
+    
+    'i18n_file' => 'noviusos_templates_e::metadata',
     'launchers' => array(
     ),
     'enhancers' => array(
     ),
     'templates' => array(
         'noviusos_custom_common' => array(
-            'file' => 'noviusos_templates_custom::common',
+            'file' => 'noviusos_templates_e::common',
             'title' => 'Custom template (Common version)',
             'cols' => 1,
             'rows' => 1,
@@ -32,7 +33,7 @@ return array(
             'module' => '',
         ),
         'noviusos_custom_jumbotron' => array(
-            'file' => 'noviusos_templates_custom::jumbotron',
+            'file' => 'noviusos_templates_e::jumbotron',
             'title' => 'Custom template (Jumbotron version)',
             'cols' => 1,
             'rows' => 1,
