@@ -9,9 +9,6 @@ Module::load("noviusos_templates_e");
 
 $config = \Nos\Templates\Custom\loadViewConfig();
 
-
-
-
 $skin ="";
 
 foreach($_REQUEST as $key => $value)

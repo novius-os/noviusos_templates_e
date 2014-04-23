@@ -7,6 +7,56 @@
 
         twitter(document, "script", "twitter-wjs");
 
+
+
+        $("#optionbar select").change(function(){
+            $("#style_submit").prop("disabled" , false);
+            $("#style_submit").text("Enregistrer les modifications");
+         });
+        $("#optionbar input , textarea").keypress(function(){
+            $("#style_submit").prop("disabled" , false);
+            $("#style_submit").text("Enregistrer les modifications");
+        });
+        $("#optionbar input[type='checkbox']").click(function(){
+            $("#style_submit").prop("disabled" , false);
+            $("#style_submit").text("Enregistrer les modifications");
+        });
+
+
+        $("#tab_left a").click(function(){
+            $("#div_tab_left").show();
+            $("#tab_left").addClass("active");
+            $("#div_tab_right").hide();
+            $("#tab_right").removeClass("active");
+            return false;
+        });
+
+        $("#tab_right a").click(function(){
+            $("#div_tab_left").hide();
+            $("#tab_left").removeClass("active");
+            $("#div_tab_right").show();
+            $("#tab_right").addClass("active");
+            return false;
+        });
+
+
+        var tab_gauche;
+        var tab_droite;
+;
+        $(".ul_sort").sortable({
+
+            stop : function(){
+                tab_gauche = $("#div_tab_left .ul_sort").sortable("toArray");
+                tab_droite = $("#div_tab_right .ul_sort").sortable("toArray");
+            }
+
+        });
+        $(".ul_sort").disableSelection();
+
+        tab_gauche = $("#div_tab_left .ul_sort").sortable("toArray");
+        tab_droite = $("#div_tab_right .ul_sort").sortable("toArray");
+
+
         $("#select_Skin").change(function(){
 
 
@@ -15,11 +65,11 @@
 
             if($("#select_Skin :selected").attr("value") == "Custom")
             {
-                $("#p_custom").css("display" , "block");
+                $("#div_custom").show("slow");
             }
             else
             {
-                $("#p_custom").css("display" , "none");
+                $("#div_custom").hide("slow");
             }
         });
 
@@ -54,7 +104,7 @@
                 url:"htdocs/apps/noviusos_templates_e/css_submit.php",
                 type:"POST",
                 dataType: "html",
-                data : $("#form_option").serialize(),
+                data : $("#form_option").serialize()+"&tab_gauche="+tab_gauche+"&tab_droite="+tab_droite,
                 error :function(){alert("erreur lors de la requete ajax")},
                 beforeSend :function(msg){
 
@@ -143,3 +193,4 @@ function setStyleSheet(title)
         date.setFullYear(date.getFullYear() + 1);
     }
 }
+

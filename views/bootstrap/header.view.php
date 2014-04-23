@@ -47,7 +47,7 @@ if (count($pages)) {
 
             <a class="navbar-brand" id="sitename" href="<?=\Nos\Tools_Url::context(\Nos\Nos::main_controller()->getPage()->get_context()); ?>"><?= $str_img_small ?><?= $str_title_small ?></a>
             <?php if($config['option']['header_menu']['active'] == "y"){
-                $top = "-70px";
+                $top = "-72px";
                 ?>
             <button class="navbar-toggle collapsed right" data-target=".navbar-collapse" data-toggle="collapse"
                     type="button">

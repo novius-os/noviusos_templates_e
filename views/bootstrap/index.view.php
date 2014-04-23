@@ -46,11 +46,11 @@ $config = \Nos\Templates\Custom\loadViewConfig();
 
     ?>
 
-    <link rel="stylesheet" href="static/apps/noviusos_templates_custom/vendor/<?=$str_theme_name?>/css/social-buttons-3.css">
+    <link rel="stylesheet" href="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/css/social-buttons-3.css">
 
 
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" data-local= "static/apps/noviusos_templates_custom/vendor/css/jquery-ui.css"/>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" data-local= "static/apps/noviusos_templates_custom/vendor/<?=$str_theme_name?>/css/font-awesome.css">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" data-local= "static/apps/noviusos_templates_e/vendor/css/jquery-ui.css"/>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" data-local= "static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/css/font-awesome.css">
 
 
 
@@ -68,9 +68,9 @@ $config = \Nos\Templates\Custom\loadViewConfig();
     <script>    $.fn.modal || document.write('<script src="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/js/bootstrap.min.js">\x3C/script>')</script>
 
 
-    <script src="static/apps/noviusos_templates_custom/vendor/<?=$str_theme_name?>/js/less-1.7.0.min.js"></script>
-    <script src="static/apps/noviusos_templates_custom/vendor/<?=$str_theme_name?>/js/script.<?=$str_theme_name?>.js"></script>
-    <script src="static/apps/noviusos_templates_custom/vendor/js/script.js"></script>
+    <script src="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/js/less-1.7.0.min.js"></script>
+    <script src="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/js/script.<?=$str_theme_name?>.js"></script>
+    <script src="static/apps/noviusos_templates_e/vendor/js/script.js"></script>
     <!-- Fallback Css -->
     <!--<script type="text/javascript">
 

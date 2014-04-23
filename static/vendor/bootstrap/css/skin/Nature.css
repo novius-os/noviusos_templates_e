@@ -6243,6 +6243,37 @@ nav.navbar {
 .social li button {
   text-align: left;
 }
+.optionbar_button {
+  font-size: 30px;
+  float: left;
+  position: fixed;
+  z-index: 3000;
+  opacity: 0.2;
+}
+#optionbar input[type='text'],
+select,
+textarea {
+  width: 250px;
+  color: #333;
+}
+.optionbar_button:hover {
+  opacity: 0.8;
+}
+.switch_on {
+  color: #1ccfaf;
+}
+.ul_sort {
+  list-style: none;
+}
+.ul_sort li {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: -15px;
+}
+.ul_sort li:hover {
+  background-color: #26ada1;
+  color: #ffffff;
+}
 @media (min-width: 767px) {
   #list-menu {
     position: absolute;

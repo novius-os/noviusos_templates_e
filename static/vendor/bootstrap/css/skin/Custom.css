@@ -889,7 +889,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #999999;
+  background-color: #ffffff;
 }
 input,
 button,
@@ -934,7 +934,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857143;
-  background-color: #999999;
+  background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2064,7 +2064,7 @@ th {
   border-top: 2px solid #dddddd;
 }
 .table .table {
-  background-color: #999999;
+  background-color: #ffffff;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -3616,7 +3616,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: #999999;
+  background-color: #ffffff;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -3662,7 +3662,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs.nav-justified > .active > a,
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #999999;
+    border-bottom-color: #ffffff;
   }
 }
 .nav-pills > li {
@@ -3730,7 +3730,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs-justified > .active > a,
   .nav-tabs-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus {
-    border-bottom-color: #999999;
+    border-bottom-color: #ffffff;
   }
 }
 .tab-content > .tab-pane {
@@ -4562,7 +4562,7 @@ a.list-group-item.active > .badge,
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857143;
-  background-color: #999999;
+  background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -6242,6 +6242,37 @@ nav.navbar {
 }
 .social li button {
   text-align: left;
+}
+.optionbar_button {
+  font-size: 30px;
+  float: left;
+  position: fixed;
+  z-index: 3000;
+  opacity: 0.2;
+}
+#optionbar input[type='text'],
+select,
+textarea {
+  width: 250px;
+  color: #333;
+}
+.optionbar_button:hover {
+  opacity: 0.8;
+}
+.switch_on {
+  color: #1ccfaf;
+}
+.ul_sort {
+  list-style: none;
+}
+.ul_sort li {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: -15px;
+}
+.ul_sort li:hover {
+  background-color: #428bca;
+  color: #ffffff;
 }
 @media (min-width: 767px) {
   #list-menu {

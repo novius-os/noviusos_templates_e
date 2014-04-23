@@ -46,10 +46,10 @@ $config = \Nos\Templates\Custom\loadViewConfig();
     }
     ?>
 
-    <link href="static/apps/noviusos_templates_custom/vendor/<?=$str_theme_name?>/css/webicons-master/webicons.css" rel="stylesheet" type="text/css">
+    <link href="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/css/webicons-master/webicons.css" rel="stylesheet" type="text/css">
 
 
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" data-local= "static/apps/noviusos_templates_custom/vendor/css/jquery-ui.css"/>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" data-local= "static/apps/noviusos_templates_e/vendor/css/jquery-ui.css"/>
 
     <!-- Fallback Jquery -->
     <script src="http://code.jquery.com/jquery.min.js"></script>
@@ -64,10 +64,10 @@ $config = \Nos\Templates\Custom\loadViewConfig();
     <script>    $.fn.modal || document.write('<script src="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/js/foundation.min.js">\x3C/script>')</script>
 
 
-    <script src="static/apps/noviusos_templates_custom/vendor/<?=$str_theme_name?>/js/foundation/foundation.topbar.js"></script>
-    <script src="static/apps/noviusos_templates_custom/vendor/<?=$str_theme_name?>/js/foundation/foundation.dropdown.js"></script>
-    <script src="static/apps/noviusos_templates_custom/vendor/js/script.js"></script>
-    <script src="static/apps/noviusos_templates_custom/vendor/<?=$str_theme_name?>/js/script.<?=$str_theme_name?>.js"></script>
+    <script src="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/js/foundation/foundation.topbar.js"></script>
+    <script src="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/js/foundation/foundation.dropdown.js"></script>
+    <script src="static/apps/noviusos_templates_e/vendor/js/script.js"></script>
+    <script src="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/js/script.<?=$str_theme_name?>.js"></script>
     <!-- Fallback Css -->
     <!--<script type="text/javascript">
 

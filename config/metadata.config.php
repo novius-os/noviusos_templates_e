@@ -15,7 +15,7 @@ return array(
         'name' => 'Novius OS',
     ),
     'namespace' => 'Nos\Templates\Custom',
-    
+
     'i18n_file' => 'noviusos_templates_e::metadata',
     'launchers' => array(
     ),
