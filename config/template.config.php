@@ -1,7 +1,7 @@
 <?php
 return array (
   'theme_name' => 'bootstrap',
-  'skin' => 'Bootstrap',
+  'skin' => 'Amelia',
   'css_default' => 'Style.scss',
   'function_file' => 'fonctions.view.php',
   'language' => 'n',
@@ -87,10 +87,24 @@ return array (
       ),
       'left_bar' => 
       array (
+        'MenuId' => 
+        array (
+          'type' => 'menu_id',
+          'active' => 'y',
+          'page_id' => NULL,
+        ),
+        'Time_line_Twitter' => 
+        array (
+          'type' => 'twitterTL',
+          'active' => 'y',
+          'account_name' => 'Noviusinfo',
+          'tweet_limit' => '100',
+          'text' => 'Tweets',
+        ),
         'Menu' => 
         array (
           'type' => 'menu',
-          'active' => 'y',
+          'active' => 'n',
           'menu_list' => 
           array (
             0 => 
@@ -142,20 +156,6 @@ return array (
           'title' => 'Boutique',
           'content' => 'N\'oubliez pas d\'acheter nos nouveaux produit !',
         ),
-        'Time_line_Twitter' => 
-        array (
-          'type' => 'twitterTL',
-          'active' => 'y',
-          'account_name' => 'Noviusinfo',
-          'tweet_limit' => '100',
-          'text' => 'Tweets',
-        ),
-        'MenuId' => 
-        array (
-          'type' => 'menu_id',
-          'active' => 'y',
-          'page_id' => NULL,
-        ),
       ),
       '' => 
       array (
@@ -174,7 +174,12 @@ return array (
     ),
     'footer' => 
     array (
-      'text' => 'Cover template for Novius OSMenuId,Menu,Panel_1,Time_line_TwitterSocial,Time_line_Twitter,Panel_1,Panel_2',
+      'text' => 'Cover template for Novius OS',
+      'menu' => 
+      array (
+        'active' => 'y',
+        'page_id' => NULL,
+      ),
     ),
   ),
 );

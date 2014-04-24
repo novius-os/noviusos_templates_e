@@ -6133,13 +6133,6 @@ button.close {
     display: none !important;
   }
 }
-.footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-top: 40px;
-  border-top: 1px solid #eee;
-  text-align: center;
-}
 #sidebar-wrapper {
   height: 100%;
   transition: all 0.4s ease 0s;
@@ -6273,6 +6266,24 @@ textarea {
 .ul_sort li:hover {
   background-color: #797493;
   color: #ffffff;
+}
+.footer {
+  background-color: #cfb7ab;
+}
+.footer .footer_text {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-top: 10px;
+  border-top: 1px solid #ae5e53;
+  text-align: center;
+}
+.footer .footer_menu > ul {
+  margin-top: 10px;
+}
+.footer .footer_menu a {
+  text-align: left;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 @media (min-width: 767px) {
   #list-menu {

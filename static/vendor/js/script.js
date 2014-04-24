@@ -48,7 +48,11 @@
             stop : function(){
                 tab_gauche = $("#div_tab_left .ul_sort").sortable("toArray");
                 tab_droite = $("#div_tab_right .ul_sort").sortable("toArray");
+                $("#style_submit").prop("disabled" , false);
+                $("#style_submit").text("Enregistrer les modifications");
+
             }
+
 
         });
         $(".ul_sort").disableSelection();

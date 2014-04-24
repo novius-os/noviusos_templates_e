@@ -25,7 +25,7 @@ $side_bar = $config["option"]["side_bar"]["position"];
                 <form id="form_option" autocomplete="off" onsubmit="return false;">
 
                     <div>
-                        <label for="select_Skin">Skin:</label>
+                        <label for="select_Skin"><h5>Skin:</h5></label>
                         <button id="btn_swt_skin" type="button" style="float: right"><i class="switch_on glyphicon glyphicon-collapse-down"></i></button>
                         <br>
                         <div>
@@ -59,7 +59,7 @@ $side_bar = $config["option"]["side_bar"]["position"];
 
 
                     <div>
-                        <label for="select_sidebar">Side bar:</label>
+                        <label for="select_sidebar"><h5>Side bar:</h5></label>
                         <button id="btn_swt_side_bar" type="button" style="float: right"><i class="switch_on glyphicon glyphicon-collapse-down"></i></button>
 
                         <div>
@@ -123,7 +123,7 @@ $side_bar = $config["option"]["side_bar"]["position"];
                     </div>
 
                     <div>
-                        <label for="">Social:</label>
+                        <label for=""><h5>Social:</h5></label>
                         <button id="btn_swt_social" type="button" style="float: right"><i class="switch_on glyphicon glyphicon-collapse-down"></i></button>
 
                         <div>
@@ -143,7 +143,7 @@ $side_bar = $config["option"]["side_bar"]["position"];
 
                     <div>
 
-                        <label for="">Header:</label>
+                        <label for=""><h5>Header:</h5></label>
                         <button id="btn_swt_header" type="button" style="float: right"><i class="switch_on glyphicon glyphicon-collapse-down"></i></button>
 
 
@@ -176,8 +176,21 @@ $side_bar = $config["option"]["side_bar"]["position"];
                                        value="<?=$config["option"]["title"]["baseline_text"]?>">
                             </p>
 
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <label for=""><h5>Footer:</h5></label>
+                        <button id="btn_swt_footer" type="button" style="float: right"><i class="switch_on glyphicon glyphicon-collapse-down"></i></button>
+
+
+                        <div>
+
+
                             <p>
-                                <label for="input_footer">Footer:</label><br>
+                                <label for="input_footer">Texte Footer:</label><br>
                                 <input type="text" id="input_footer" name="input_footer"
                                        placeholder="Cover template for Novius OS"
                                        value="<?=$config["option"]["footer"]["text"]?>">
