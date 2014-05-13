@@ -11,7 +11,7 @@ $top = "-50px";
 
 switch ($config['option']['title']['element']) {
     case "text":
-        $str_img = "<!--<img src='img/trombone.png'>-->";
+        $str_img = "";
         $id_text = "titleonly";
         $str_img_small = "";
         $str_title_small = "<span class='title_small_only'>" . $config['option']['title']["title_text"] . "</span>";

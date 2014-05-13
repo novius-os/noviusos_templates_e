@@ -56,7 +56,7 @@
 
         <div class="<?=$str_class_inner_content?>">
             <div class="row">
-                <?php if($jumbotron){?>
+                <?php if($config["option"]["jumbotron"]["active"] =="y"){?>
                 <div class="jumbotron">
                     <div class="container">
                         <h1><?=$config["option"]["jumbotron"]["title"] ?></h1>

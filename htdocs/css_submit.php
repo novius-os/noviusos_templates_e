@@ -11,7 +11,7 @@ define('NOS_ENTRY_POINT', 'front');
 require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'novius-os'.DIRECTORY_SEPARATOR.'framework'.DIRECTORY_SEPARATOR.'bootstrap.php';
 Module::load("noviusos_templates_e");
 
-$config = \Nos\Templates\Custom\loadViewConfig();
+$config = \Nos\Templates\Custom\loadViewConfigCustom();
 
 $parameters= array();
 $parameters["text_css"]        = array("path" => "" , "value" => (isset($_REQUEST["txt_css"]) ? $_REQUEST["txt_css"] : ""));

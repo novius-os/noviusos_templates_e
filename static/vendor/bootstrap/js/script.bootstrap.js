@@ -9,10 +9,6 @@
         $("button[id^='btn_swt_']").children("i").removeClass("switch_on");
         $("button[id^='btn_swt_']").parent().children("div").hide("slow");
 
-        $(".ul_sort").hover(function(){
-
-
-        })
 
 
         $(".optionbar_button").click(function(){

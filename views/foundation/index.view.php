@@ -11,7 +11,63 @@
 // Loading configs (see bootstrap.php)
 
 require_once "content_config.php";
-$config = \Nos\Templates\Custom\loadViewConfig();
+$config = \Nos\Templates\Custom\loadViewConfigCustom();
+
+//\Fuel\Core\Debug::dump($page->template_variation->tpvar_data);
+
+
+foreach($page->template_variation->tpvar_data as $key => $value)
+{
+
+    if($value != "" && $value != null)
+    {
+
+        if($key == "_input_hidden_left")
+        {
+            $tab_temp = explode('||'  , $value);
+
+            foreach($tab_temp as $key => $value)
+            {
+                $temp_key = str_replace("-" , "." ,$value);
+                $temp_key = str_replace(".active" , "" ,$temp_key);
+                $tab_temp_value =  explode("-"  ,$value);
+                $temp_value = $tab_temp_value[count($tab_temp_value)-2];
+                $tab_gauche[$temp_value]=arr::get($config , $temp_key );
+            }
+
+            arr::set($config , 'option.side_bar.left_bar',  $tab_gauche);
+
+        }
+        else if($key == "_input_hidden_right")
+        {
+            $tab_temp = explode('||'  , $value);
+
+            foreach($tab_temp as $key => $value)
+            {
+
+                $temp_key = str_replace("-" , "." ,$value);
+                $temp_key = str_replace(".active" , "" ,$temp_key);
+                $tab_temp_value =  explode("-"  ,$value);
+                $temp_value = $tab_temp_value[count($tab_temp_value)-2];
+                $tab_droite[$temp_value]=arr::get($config , $temp_key );
+            }
+
+            arr::set($config , 'option.side_bar.right_bar',  $tab_droite);
+
+        }
+        else
+        {
+            $key =  str_replace("-" , "." ,$key);
+            arr::set($config , $key , $value);
+        }
+
+
+    }
+
+
+
+
+}
 
 
 ?>
@@ -66,6 +122,7 @@ $config = \Nos\Templates\Custom\loadViewConfig();
 
     <script src="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/js/foundation/foundation.topbar.js"></script>
     <script src="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/js/foundation/foundation.dropdown.js"></script>
+    <script src="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/js/foundation/foundation.accordion.js"></script>
     <script src="static/apps/noviusos_templates_e/vendor/js/script.js"></script>
     <script src="static/apps/noviusos_templates_e/vendor/<?=$str_theme_name?>/js/script.<?=$str_theme_name?>.js"></script>
     <!-- Fallback Css -->

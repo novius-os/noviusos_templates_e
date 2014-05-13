@@ -10,8 +10,65 @@
 
 // Loading configs (see bootstrap.php)
 
-require_once "content_config.php";
-$config = \Nos\Templates\Custom\loadViewConfig();
+$config = \Nos\Templates\Custom\loadViewConfigCustom();
+
+//\Fuel\Core\Debug::dump($page->template_variation->tpvar_data);
+
+
+foreach($page->template_variation->tpvar_data as $key => $value)
+{
+
+    if($value != "" && $value != null)
+    {
+
+        if($key == "_input_hidden_left")
+        {
+            $tab_temp = explode('||'  , $value);
+
+            foreach($tab_temp as $key => $value)
+            {
+                $temp_key = str_replace("-" , "." ,$value);
+                $temp_key = str_replace(".active" , "" ,$temp_key);
+                $tab_temp_value =  explode("-"  ,$value);
+                $temp_value = $tab_temp_value[count($tab_temp_value)-2];
+                $tab_gauche[$temp_value]=arr::get($config , $temp_key );
+            }
+
+            arr::set($config , 'option.side_bar.left_bar',  $tab_gauche);
+
+        }
+        else if($key == "_input_hidden_right")
+        {
+            $tab_temp = explode('||'  , $value);
+
+            foreach($tab_temp as $key => $value)
+            {
+
+                $temp_key = str_replace("-" , "." ,$value);
+                $temp_key = str_replace(".active" , "" ,$temp_key);
+                $tab_temp_value =  explode("-"  ,$value);
+                $temp_value = $tab_temp_value[count($tab_temp_value)-2];
+                $tab_droite[$temp_value]=arr::get($config , $temp_key );
+            }
+
+            arr::set($config , 'option.side_bar.right_bar',  $tab_droite);
+
+        }
+        else
+        {
+            $key =  str_replace("-" , "." ,$key);
+            arr::set($config , $key , $value);
+        }
+
+
+    }
+
+
+
+
+}
+
+
 
 
 ?>
@@ -90,10 +147,12 @@ $config = \Nos\Templates\Custom\loadViewConfig();
 
 </head>
 
+
+<body class="background">
+
 <?php
 include($config["function_file"]);
 ?>
-<body class="background">
 
        <?php
        if($config["option_bar"] == "y")
@@ -123,6 +182,7 @@ include($config["function_file"]);
         <?php }?>
         <div id="content_inner">
             <?php
+
             $view =  \View::forge("noviusos_templates_e::bootstrap/header",array(
                 'sitename'=>$config['option']['title']['title_text'],
                 'link' => $config['option']['title']['url'],
@@ -132,7 +192,6 @@ include($config["function_file"]);
                 'current_context' => $page->get_context()
             ), false );
             $view->config = $config;
-            $view->tab_menu = $tab_menu;
 
 
 

@@ -11,7 +11,7 @@ define('NOS_ENTRY_POINT', 'front');
 require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'novius-os'.DIRECTORY_SEPARATOR.'framework'.DIRECTORY_SEPARATOR.'bootstrap.php';
 Module::load("noviusos_templates_e");
 
-$config = \Nos\Templates\Custom\loadViewConfig();
+$config = \Nos\Templates\Custom\loadViewConfigCustom();
 
 set_time_limit(1000000);
 
@@ -93,6 +93,7 @@ else if($config["theme_name"] == "foundation")
 
     $str_param .= "@import '".__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."local/applications/noviusos_templates_e/vendor/scssphp-compass-master/stylesheets/compass"."';\n";
     $str_param .= "@import 'Style'; \n";
+    $str_param .= "@import 'Glyphicon'; \n";
 
     //------------------------------
     // Compilation des autres styles

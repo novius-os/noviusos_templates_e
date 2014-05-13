@@ -7,7 +7,7 @@ require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY
 
 Module::load("noviusos_templates_e");
 
-$config = \Nos\Templates\Custom\loadViewConfig();
+$config = \Nos\Templates\Custom\loadViewConfigCustom();
 
 $skin ="";
 

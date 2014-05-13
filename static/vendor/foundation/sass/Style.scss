@@ -2,13 +2,6 @@
 $jumbotron-bg :#EEE !default;
 
 
-.footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-top: 40px;
-  border-top: 1px solid #eee;
-  text-align: center;
-}
 #sidebar-wrapper {
   height: 100%;
   transition: all 0.4s ease 0s;
@@ -147,6 +140,122 @@ input , select{
     font-size: 21px;
     font-weight: 200;
 }
+
+
+.optionbar_button {
+
+    font-size: 30px;
+    float: left;
+    position: fixed;
+    z-index: 3000;
+    opacity: 0.2;
+
+}
+
+#optionbar input[type='text'] , select , textarea{
+    width : 250px;
+    color : #333;
+}
+
+.optionbar_button:hover {
+
+    opacity: 0.8;
+
+}
+
+
+.switch_on{
+    color : rgba(28, 207, 175, 1);
+}
+
+.ul_sort {
+
+    list-style: none;
+
+    li{
+
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-left: -15px;
+
+        &:hover{
+            background-color: $primary-color;
+
+        }
+
+        label{
+            &:hover{
+                color :$button-font-color;
+            }
+
+        }
+
+    }
+
+}
+
+
+
+.footer{
+
+    background-color: $jumbotron-bg;
+
+    .footer_text{
+
+        padding-top: 20px;
+        padding-bottom: 40px;
+        margin-top: 10px;
+        border-top: 1px solid $body-font-color;
+        text-align: center;
+    }
+
+    .footer_menu{
+
+        & > ul{
+
+            margin-top: 10px;
+            text-align: left;width: 98%;
+            display: table;
+            table-layout: fixed;
+
+            &>li
+            {
+                display: table-cell;
+
+            }
+        }
+
+
+
+        a{
+            text-align: left;
+            padding-bottom: 5px;
+            padding-top: 5px;
+
+        }
+
+    }
+
+
+}
+
+
+#form_option{
+
+    button{
+
+        padding: 0;
+        border-radius: 5px;
+        margin: 0;
+    }
+
+    label{
+
+        display: inline-block;
+    }
+
+}
+
 
 @media (min-width: 767px) {
   #list-menu {

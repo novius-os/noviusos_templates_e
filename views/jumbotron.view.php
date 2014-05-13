@@ -5,7 +5,8 @@
  * Date: 04/04/14
  * Time: 16:16
  */
-$config = \Nos\Templates\Custom\loadViewConfig();
+$config = \Nos\Templates\Custom\loadViewConfigCustom();
+
 
 $jumbotron = true;
 $view = \View::forge("noviusos_templates_e::".$config['theme_name']."/index", array('jumbotron' => $jumbotron,

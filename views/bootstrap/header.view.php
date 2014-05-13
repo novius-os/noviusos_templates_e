@@ -35,7 +35,6 @@ $pages = array();
 $pages = findPages($config['option']['header_menu']['page_id']);
 $current = \Nos\Nos::main_controller()->getPage()->page_id;
 
-if (count($pages)) {
 
 ?>
 
@@ -111,7 +110,7 @@ if (count($pages)) {
                 }
                 }?>
             </ul>
-<?php }?>
+<?php ?>
         </div>
 
     </nav>

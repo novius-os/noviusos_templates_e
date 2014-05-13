@@ -1,0 +1,41 @@
+span.icon{
+
+    margin: 2px 5px 0px 5px;
+    position: relative;
+    padding:7px;
+    cursor: pointer;
+    float: left;
+}
+
+table .active> td > span
+{
+    margin-left : 17px;
+
+}
+
+
+table .active.first> td > span i.ui-icon-arrowthick-1-n
+{
+    display: none;
+
+}
+
+table .active.last > td > span i.ui-icon-arrowthick-1-s
+{
+    display: none;
+
+}
+
+table .active.last > td > button
+{
+    margin-left : 40px !important;
+
+
+}
+
+table .active:hover
+{
+    background-color: #DDD;
+
+}
+
