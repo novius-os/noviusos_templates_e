@@ -32,15 +32,5 @@ return array(
             ),
             'module' => '',
         ),
-        'noviusos_custom_jumbotron' => array(
-            'file' => 'noviusos_templates_e::jumbotron',
-            'title' => 'Custom template (Jumbotron version)',
-            'cols' => 1,
-            'rows' => 1,
-            'layout' => array(
-                'content' => '0,0,1,1',
-            ),
-            'module' => '',
-        )
     ),
 );

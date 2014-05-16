@@ -5,7 +5,7 @@ return array (
   'css_default' => 'Style.scss',
   'function_file' => 'fonctions.view.php',
   'language' => 'n',
-  'option_bar' => 'y',
+  'option_bar' => 'n',
   'facebook' => 'https://www.facebook.com/noviusfr',
   'twitter' => 'MonsieurDream',
   'google-plus' => '',
@@ -85,60 +85,33 @@ return array (
           'title' => 'Prochaine réunion :',
           'content' => 'Mercredi 18 décembre à 18h30 salle des marmottes',
         ),
+        'Panel_3' =>
+            array (
+                'type' => 'panel',
+                'active' => 'n',
+                'title' => '',
+                'content' => '',
+            ),
+        'Panel_4' =>
+            array (
+                'type' => 'panel',
+                'active' => 'n',
+                'title' => '',
+                'content' => '',
+            ),
+        'Panel_5' =>
+            array (
+                'type' => 'panel',
+                'active' => 'n',
+                'title' => '',
+              'content' => '',
+          ),
         'MenuId' => 
         array (
           'type' => 'menu_id',
           'active' => 'n',
-          'page_id' => NULL,
         ),
-        'Menu' => 
-        array (
-          'type' => 'menu',
-          'active' => 'n',
-          'menu_list' => 
-          array (
-            0 => 
-            array (
-              'title' => 'Start Bootstrap',
-              'link' => '#',
-            ),
-            1 => 
-            array (
-              'title' => 'Dashboard',
-              'link' => '#',
-            ),
-            2 => 
-            array (
-              'title' => 'Shortcut',
-              'link' => '#',
-            ),
-            3 => 
-            array (
-              'title' => 'Overview',
-              'link' => '#',
-            ),
-            4 => 
-            array (
-              'title' => 'Events',
-              'link' => '#',
-            ),
-            5 => 
-            array (
-              'title' => 'About',
-              'link' => '#',
-            ),
-            6 => 
-            array (
-              'title' => 'Services',
-              'link' => '#',
-            ),
-            7 => 
-            array (
-              'title' => 'Contact',
-              'link' => '#',
-            ),
-          ),
-        ),
+
       ),
       'left_bar' => 
       array (
@@ -148,19 +121,19 @@ return array (
           'active' => 'n',
           'list_social' => 
           array (
-            0 => 
+            0 =>
             array (
               'name' => 'facebook',
               'link' => '#',
               'text' => 'Facebook',
             ),
-            1 => 
+            1 =>
             array (
               'name' => 'twitter',
               'link' => '#',
               'text' => 'Twitter',
             ),
-            2 => 
+            2 =>
             array (
               'name' => 'google-plus',
               'link' => '#',
@@ -185,9 +158,30 @@ return array (
         array (
           'type' => 'panel',
           'active' => 'n',
-          'title' => 'Prochaine réunion :',
-          'content' => 'Mercredi 18 décembre à 18h30 salle des marmottes',
+          'title' => '',
+          'content' => '',
         ),
+      'Panel_3' =>
+          array (
+              'type' => 'panel',
+              'active' => 'n',
+              'title' => '',
+              'content' => '',
+          ),
+      'Panel_4' =>
+          array (
+              'type' => 'panel',
+              'active' => 'n',
+              'title' => '',
+              'content' => '',
+          ),
+      'Panel_5' =>
+          array (
+              'type' => 'panel',
+              'active' => 'n',
+              'title' => '',
+              'content' => '',
+          ),
         'Time_line_Twitter' => 
         array (
           'type' => 'twitterTL',
@@ -200,69 +194,13 @@ return array (
         array (
           'type' => 'menu_id',
           'active' => 'n',
-          'page_id' => NULL,
-        ),
-        'Menu' => 
-        array (
-          'type' => 'menu',
-          'active' => 'n',
-          'menu_list' => 
-          array (
-            0 => 
-            array (
-              'title' => 'Start Bootstrap',
-              'link' => '#',
-            ),
-            1 => 
-            array (
-              'title' => 'Dashboard',
-              'link' => '#',
-            ),
-            2 => 
-            array (
-              'title' => 'Shortcut',
-              'link' => '#',
-            ),
-            3 => 
-            array (
-              'title' => 'Overview',
-              'link' => '#',
-            ),
-            4 => 
-            array (
-              'title' => 'Events',
-              'link' => '#',
-            ),
-            5 => 
-            array (
-              'title' => 'About',
-              'link' => '#',
-            ),
-            6 => 
-            array (
-              'title' => 'Services',
-              'link' => '#',
-            ),
-            7 => 
-            array (
-              'title' => 'Contact',
-              'link' => '#',
-            ),
-          ),
-        ),
-      ),
-      '' => 
-      array (
-        '' => 
-        array (
-          'active' => 'n',
         ),
       ),
     ),
     'title' => 
     array (
       'element' => 'both',
-      'url' => 'static/apps/noviusos_templates_e2/img/novius.png',
+      'url' => 'static/apps/noviusos_templates_e/img/novius.png',
       'title_text' => 'azezrze',
       'baseline_text' => 'ezrzqerez',
     ),
@@ -271,70 +209,8 @@ return array (
       'text' => 'szerzerezrezr',
       'menu' => 
       array (
-        'type' => 'menu',
+        'type' => 'menu_id',
         'active' => 'y',
-        'page_id' => NULL,
-        'menu_list' => 
-        array (
-          0 => 
-          array (
-            'title' => 'Start Bootstrap',
-            'link' => '#',
-            'sub' => 
-            array (
-              1 => 
-              array (
-                'title' => 'Dashboard',
-                'link' => '#',
-              ),
-              2 => 
-              array (
-                'title' => 'Shortcut',
-                'link' => '#',
-              ),
-              3 => 
-              array (
-                'title' => 'Overview',
-                'link' => '#',
-              ),
-            ),
-          ),
-          1 => 
-          array (
-            'title' => 'Dashboard',
-            'link' => '#',
-          ),
-          2 => 
-          array (
-            'title' => 'Shortcut',
-            'link' => '#',
-          ),
-          3 => 
-          array (
-            'title' => 'Overview',
-            'link' => '#',
-          ),
-          4 => 
-          array (
-            'title' => 'Events',
-            'link' => '#',
-          ),
-          5 => 
-          array (
-            'title' => 'About',
-            'link' => '#',
-          ),
-          6 => 
-          array (
-            'title' => 'Services',
-            'link' => '#',
-          ),
-          7 => 
-          array (
-            'title' => 'Contact',
-            'link' => '#',
-          ),
-        ),
       ),
     ),
   ),

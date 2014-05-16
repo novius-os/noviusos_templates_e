@@ -29,11 +29,7 @@ $top = "-50px";
 $path_img = "static/apps/noviusos_templates_e/img/";
 
 
-$depth = 2;
-if ($depth > 0) {
-$pages = array();
-$pages = findPages($config['option']['header_menu']['page_id']);
-$current = \Nos\Nos::main_controller()->getPage()->page_id;
+$depth = 3;
 
 
 ?>
@@ -59,58 +55,22 @@ $current = \Nos\Nos::main_controller()->getPage()->page_id;
         </div>
     <?php if($config['option']['header_menu']['active'] == "y"){ ?>
         <div class="container collapse navbar-collapse">
-            <ul id="list-menu" class="nav navbar-nav navbar-right">
                 <?php
-                foreach ($pages as $p) {
 
-
-                    if($depth > 1 && count(findPages($p['id'])) != 0)
-                    {
-                        $anchor = array('text' => e($p->pick('menu_title', 'title'))." <b class='caret'></b>" );
-                        $anchor["data-toggle"]="dropdown";
-                    }else
-                        $anchor = array('text' => e($p->pick('menu_title', 'title')) );
-
-                    $current == $p['id'] && $anchor['class'] = 'active '.($depth > 1 ? " dropdown-toggle" : "" );
-                    echo '<li class="lvl0'.($current == $p['id'] ? " active " : "" ) . ($depth > 1 && count(findPages($p['id'])) ? " dropdown" : "" ).'">', $p->htmlAnchor($anchor);
-                    if ($depth > 1) {
-                        $subpages = findPages($p['id']);
-                        if (count($subpages)) {
-                            echo '<ul class="nobullet submenu dropdown-menu">';
-                            foreach ($subpages as $sp) {
-                                $anchor = array('text' => e($sp->pick('menu_title', 'title')));
-                                $current == $sp['id'] && $anchor['class'] = 'active';
-                                echo '<li class="lvl1">', $sp->htmlAnchor($anchor), '</li>';
-                            }
-                            echo '</ul>';
-                        }
+                if ($depth > 0) {
+                    $tpvar = \Nos\Nos::main_controller()->getTemplateVariation();
+                    $menu = $tpvar->menus->principal;
+                    if (empty($menu)) {
+                        $menu = \Nos\Menu\Model_Menu::buildFromPages(\Nos\Nos::main_controller()->getContext());
                     }
-                    echo '</li>';
+                    echo $menu->html(array(
+                        'view' => 'noviusos_templates_e::'.$config['theme_name'].'/menu_header_driver',
+                        'id' => 'list-menu',
+                        'class' => 'nav navbar-nav navbar-right'
+                    ));
                 }
 
-                if($config["language"] == "y")
-                {
-                    // Display a switch to others contexts home page
-                    $contexts = \Nos\Tools_Context::contexts();
-                    $links = array();
-                    $links[] = '<li class="dropdown"><a href="'.\Nos\Tools_Url::context($current_context).'"  data-toggle="dropdown" class="dropdown-toggle" >'.\Nos\Tools_Context::contextLabel($current_context).'<b class="caret"></b></a><ul class="dropdown-menu">';
-
-                    foreach (array_keys($contexts) as $i => $context) {
-                        if ($context === $current_context) {
-                            continue;
-                        }
-                        $links[] = '<li><a href="'.\Nos\Tools_Url::context($context).'">'.\Nos\Tools_Context::contextLabel($context).'</a></li>';
-                    }
-                    if (!empty($links)) {
-                        echo  implode(' ', $links);
-                    }
-                    echo '</ul></li>';
-                }
-                echo '</ul>';
-                }
-                }?>
-            </ul>
-<?php ?>
+            }?>
         </div>
 
     </nav>
@@ -127,30 +87,3 @@ $current = \Nos\Nos::main_controller()->getPage()->page_id;
 
 
 
-
-<?php
-/**
- * @param null $idParent
- * @return array|\Nos\Page\Model_Page|\Nos\Page\Model_Page[]
- */
-
-function findPages($idParent = null)
-{
-    $where = array(
-        'page_parent_id' => $idParent,
-        'published'      => 1,
-        'page_menu'      => 1,
-        'page_context'   => \Nos\Nos::main_controller()->getPage()->page_context,
-    );
-
-    $pages = \Nos\Page\Model_Page::find('all', array(
-        'where'             => $where,
-        'order_by'          => array('page_sort' => 'asc')
-    ));
-
-    if (count($pages) > 0) {
-        return $pages;
-    } else {
-        return array();
-    }
-}
